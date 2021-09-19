@@ -25,7 +25,7 @@ Here's a walkthrough of implemented user stories:
 
 - Required User Stories: 
 
-<center><img src='https://i.imgur.com/FTAp56l.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></center>
+<center><img src='https://i.imgur.com/4NVfxoK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></center>
 <br>
 
 - Bonus User Stories:
