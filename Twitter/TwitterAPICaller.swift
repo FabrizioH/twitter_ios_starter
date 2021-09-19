@@ -9,8 +9,11 @@
 import UIKit
 import BDBOAuth1Manager
 
-class TwitterAPICaller: BDBOAuth1SessionManager {    
-    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "5lUJuO5AUpPUCez4ewYDFrtgh", consumerSecret: "s5ynGqXzstUZwFPxVyMDkYh197qvHOcVM3kwv1o2TKhS1avCdS")
+class TwitterAPICaller: BDBOAuth1SessionManager {
+    // Given codepath keys
+//    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "5lUJuO5AUpPUCez4ewYDFrtgh", consumerSecret: "s5ynGqXzstUZwFPxVyMDkYh197qvHOcVM3kwv1o2TKhS1avCdS")
+    // My own keys
+    static let client = TwitterAPICaller(baseURL: URL(string: "https://api.twitter.com"), consumerKey: "8smpFp6rgjusUg5azXK7HkUDQ", consumerSecret: "y6uc2YgBBu5gDglqaxNxL2JYpgjDg9qRVsOf9FsBSXSs2xrTrW")
     var loginSuccess: (() -> ())?
     var loginFailure: ((Error) -> ())?
     
@@ -27,7 +30,7 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         loginSuccess = success
         loginFailure = failure
         TwitterAPICaller.client?.deauthorize()
-        TwitterAPICaller.client?.fetchRequestToken(withPath: url, method: "GET", callbackURL: URL(string: "alamoTwitter://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
+        TwitterAPICaller.client?.fetchRequestToken(withPath: url, method: "GET", callbackURL: URL(string: "bdoauth://oauth"), scope: nil, success: { (requestToken: BDBOAuth1Credential!) -> Void in
             let url = URL(string: "https://api.twitter.com/oauth/authorize?oauth_token=\(requestToken.token!)")!
             UIApplication.shared.open(url)
         }, failure: { (error: Error!) -> Void in
