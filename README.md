@@ -23,13 +23,13 @@ The following **bonus** features are implemented:
 Here's a walkthrough of implemented user stories:
 
 ### Required User Stories: 
-
-<img src='https://i.imgur.com/MLfDhfe.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<br>
+<img src='https://i.imgur.com/MLfDhfe.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+<br>
 ### Bonus User Stories: 
-
-<img src='https://i.imgur.com/rZoTENE.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
+<br>
+<img src='https://i.imgur.com/rZoTENE.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
+<br>
 # Twitter - Part I
 
 This is a basic twitter app to read your tweets.
@@ -57,11 +57,11 @@ Here's a walkthrough of implemented user stories:
 
 ### Required User Stories: 
 
-<center><img src='https://i.imgur.com/4NVfxoK.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></center>
+<center><img src='https://i.imgur.com/4NVfxoK.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' /></center>
 <br>
 
 ### Bonus User Stories:
 
-<center><img src='https://i.imgur.com/35mj8SW.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></center>
+<center><img src='https://i.imgur.com/35mj8SW.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' /></center>
 <br>
-<center><img src='https://i.imgur.com/Bbsq01J.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' /></center>
+<center><img src='https://i.imgur.com/Bbsq01J.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' /></center>
