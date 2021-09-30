@@ -59,6 +59,14 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
         })
     }
 
+    func getUserInfo(url: String , success: @escaping (NSDictionary) -> (), failure: @escaping (Error) -> ()) {
+        TwitterAPICaller.client?.get(url, parameters: nil, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
+            success(response as! NSDictionary)
+        }, failure: { (task: URLSessionDataTask?, error: Error) in
+            failure(error)
+        })
+    }
+    
     func postRequest(url: String, parameters: [Any], success: @escaping () -> (), failure: @escaping (Error) -> ()){
         TwitterAPICaller.client?.post(url, parameters: parameters, progress: nil, success: { (task: URLSessionDataTask, response: Any?) in
             success()
@@ -111,4 +119,5 @@ class TwitterAPICaller: BDBOAuth1SessionManager {
             failure(error)
         })
     }
+    
 }

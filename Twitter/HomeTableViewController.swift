@@ -17,7 +17,6 @@ class HomeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        loadTweets()
         
         myRefreshControl.addTarget(self, action: #selector(loadTweets), for: .valueChanged)
         tableView.refreshControl = myRefreshControl
@@ -94,8 +93,6 @@ class HomeTableViewController: UITableViewController {
         
         let user = tweetArray[indexPath.row]["user"] as! NSDictionary
         
-        
-        
         cell.userNameLabel.text = user["name"] as? String
         cell.tweetContent.text = tweetArray[indexPath.row]["text"] as? String
 
@@ -106,18 +103,17 @@ class HomeTableViewController: UITableViewController {
             cell.profileImageView.image = UIImage(data: imageData)
         }
         
-        
-        let entitiesObj = tweetArray[indexPath.row]["entities"] as! [String: Any]
-        
         cell.setFavorite(tweetArray[indexPath.row]["favorited"] as! Bool)
         cell.tweetId = tweetArray[indexPath.row]["id"] as! Int
         
         cell.setRetweeted(tweetArray[indexPath.row]["retweeted"] as! Bool)
         
  
+        let entitiesObj = tweetArray[indexPath.row]["entities"] as! [String: Any]
+        
         let mediaObj = entitiesObj["media"] as? [[String: Any]]
         
-        if let checkMedia = mediaObj {
+        if let _ = mediaObj {
             let mediaUrl = URL(string: ((mediaObj![0]["media_url"] as? String)!))
             let data2 = try? Data(contentsOf: mediaUrl!)
             
@@ -125,8 +121,9 @@ class HomeTableViewController: UITableViewController {
                 
                 cell.media.image = UIImage(data: mediaData)
             }
+        } else {
+            cell.media.image = nil
         }
-        
 
         return cell
     }
@@ -148,21 +145,9 @@ class HomeTableViewController: UITableViewController {
         return tweetArray.count
     }
     
-    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
-        let entitiesObj = tweetArray[indexPath.row]["entities"] as! [String: Any]
-        let mediaObj = entitiesObj["media"] as? [[String: Any]]
-        let display_url = mediaObj?[0]["media_url_https"] as? String
-        print(entitiesObj)
-        print("\n\n\n")
-        
-
-        
-        print(mediaObj)
-        print("\n\n\n")
-        
-
-
-        print(display_url)
-    }
+    // Fill function for debugging tweets
+//    override func tableView(_ tableView: UITableView, didHighlightRowAt indexPath: IndexPath) {
+//
+//    }
 
 }
