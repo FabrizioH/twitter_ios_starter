@@ -26,10 +26,12 @@ Here's a walkthrough of implemented user stories:
 <br>
 <img src='https://i.imgur.com/MLfDhfe.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
 <br>
+
 ### Bonus User Stories: 
 <br>
 <img src='https://i.imgur.com/rZoTENE.gif' title='Video Walkthrough' width='250' alt='Video Walkthrough' />
 <br>
+
 # Twitter - Part I
 
 This is a basic twitter app to read your tweets.
